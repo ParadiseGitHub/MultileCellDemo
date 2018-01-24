@@ -22,6 +22,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+}
 
+class Profile {
+    var fullName: String?
+    var pictureUrl: String?
+    var email: String?
+    var about: String?
+    var friends = [Friend]()
+    var profileAttributes = [Attribute]()
+}
+class Friend {
+    var name: String?
+    var pictureUrl: String?
+}
+class Attribute {
+    var key: String?
+    var value: String?
 }
 
