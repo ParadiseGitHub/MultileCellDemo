@@ -12,6 +12,19 @@
 		E8D6E3C12018D196003A61F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D6E3BF2018D195003A61F0 /* Main.storyboard */; };
 		E8D6E3C32018D196003A61F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D6E3C22018D196003A61F0 /* Assets.xcassets */; };
 		E8D6E3C62018D196003A61F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D6E3C42018D196003A61F0 /* LaunchScreen.storyboard */; };
+		ED3D3510201970B6007A1AFF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D350F201970B6007A1AFF /* ProfileViewModel.swift */; };
+		ED3D3512201970CF007A1AFF /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D3511201970CF007A1AFF /* ProfileModel.swift */; };
+		ED3D351820197EC1007A1AFF /* NamePictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D351620197EC1007A1AFF /* NamePictureCell.swift */; };
+		ED3D351920197EC1007A1AFF /* NamePictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3D351720197EC1007A1AFF /* NamePictureCell.xib */; };
+		ED3D351E20197EE3007A1AFF /* EmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D351C20197EE3007A1AFF /* EmailCell.swift */; };
+		ED3D351F20197EE3007A1AFF /* EmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3D351D20197EE3007A1AFF /* EmailCell.xib */; };
+		ED3D352220197EF2007A1AFF /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D352020197EF2007A1AFF /* AboutCell.swift */; };
+		ED3D352320197EF2007A1AFF /* AboutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3D352120197EF2007A1AFF /* AboutCell.xib */; };
+		ED3D352620197F07007A1AFF /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D352420197F07007A1AFF /* FriendCell.swift */; };
+		ED3D352720197F07007A1AFF /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3D352520197F07007A1AFF /* FriendCell.xib */; };
+		ED3D352A20197F1A007A1AFF /* AttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D352820197F1A007A1AFF /* AttributeCell.swift */; };
+		ED3D352B20197F1A007A1AFF /* AttributeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3D352920197F1A007A1AFF /* AttributeCell.xib */; };
+		ED3D352D201985A8007A1AFF /* ServerData.json in Resources */ = {isa = PBXBuildFile; fileRef = ED3D352C201985A8007A1AFF /* ServerData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +35,19 @@
 		E8D6E3C22018D196003A61F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D6E3C52018D196003A61F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8D6E3C72018D196003A61F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED3D350F201970B6007A1AFF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		ED3D3511201970CF007A1AFF /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		ED3D351620197EC1007A1AFF /* NamePictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamePictureCell.swift; sourceTree = "<group>"; };
+		ED3D351720197EC1007A1AFF /* NamePictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NamePictureCell.xib; sourceTree = "<group>"; };
+		ED3D351C20197EE3007A1AFF /* EmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCell.swift; sourceTree = "<group>"; };
+		ED3D351D20197EE3007A1AFF /* EmailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailCell.xib; sourceTree = "<group>"; };
+		ED3D352020197EF2007A1AFF /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
+		ED3D352120197EF2007A1AFF /* AboutCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutCell.xib; sourceTree = "<group>"; };
+		ED3D352420197F07007A1AFF /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		ED3D352520197F07007A1AFF /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		ED3D352820197F1A007A1AFF /* AttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeCell.swift; sourceTree = "<group>"; };
+		ED3D352920197F1A007A1AFF /* AttributeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributeCell.xib; sourceTree = "<group>"; };
+		ED3D352C201985A8007A1AFF /* ServerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ServerData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +80,35 @@
 		E8D6E3BA2018D195003A61F0 /* MultipleCellDemo */ = {
 			isa = PBXGroup;
 			children = (
+				ED3D351320197E78007A1AFF /* TableViewCells */,
 				E8D6E3BB2018D195003A61F0 /* AppDelegate.swift */,
 				E8D6E3BD2018D195003A61F0 /* ViewController.swift */,
+				ED3D3511201970CF007A1AFF /* ProfileModel.swift */,
+				ED3D350F201970B6007A1AFF /* ProfileViewModel.swift */,
+				ED3D352C201985A8007A1AFF /* ServerData.json */,
 				E8D6E3BF2018D195003A61F0 /* Main.storyboard */,
 				E8D6E3C22018D196003A61F0 /* Assets.xcassets */,
 				E8D6E3C42018D196003A61F0 /* LaunchScreen.storyboard */,
 				E8D6E3C72018D196003A61F0 /* Info.plist */,
 			);
 			path = MultipleCellDemo;
+			sourceTree = "<group>";
+		};
+		ED3D351320197E78007A1AFF /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ED3D351620197EC1007A1AFF /* NamePictureCell.swift */,
+				ED3D351720197EC1007A1AFF /* NamePictureCell.xib */,
+				ED3D351C20197EE3007A1AFF /* EmailCell.swift */,
+				ED3D351D20197EE3007A1AFF /* EmailCell.xib */,
+				ED3D352020197EF2007A1AFF /* AboutCell.swift */,
+				ED3D352120197EF2007A1AFF /* AboutCell.xib */,
+				ED3D352420197F07007A1AFF /* FriendCell.swift */,
+				ED3D352520197F07007A1AFF /* FriendCell.xib */,
+				ED3D352820197F1A007A1AFF /* AttributeCell.swift */,
+				ED3D352920197F1A007A1AFF /* AttributeCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +171,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D6E3C62018D196003A61F0 /* LaunchScreen.storyboard in Resources */,
+				ED3D352D201985A8007A1AFF /* ServerData.json in Resources */,
+				ED3D351F20197EE3007A1AFF /* EmailCell.xib in Resources */,
+				ED3D351920197EC1007A1AFF /* NamePictureCell.xib in Resources */,
+				ED3D352720197F07007A1AFF /* FriendCell.xib in Resources */,
+				ED3D352320197EF2007A1AFF /* AboutCell.xib in Resources */,
 				E8D6E3C32018D196003A61F0 /* Assets.xcassets in Resources */,
+				ED3D352B20197F1A007A1AFF /* AttributeCell.xib in Resources */,
 				E8D6E3C12018D196003A61F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +190,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D6E3BE2018D195003A61F0 /* ViewController.swift in Sources */,
+				ED3D3510201970B6007A1AFF /* ProfileViewModel.swift in Sources */,
 				E8D6E3BC2018D195003A61F0 /* AppDelegate.swift in Sources */,
+				ED3D352620197F07007A1AFF /* FriendCell.swift in Sources */,
+				ED3D351820197EC1007A1AFF /* NamePictureCell.swift in Sources */,
+				ED3D351E20197EE3007A1AFF /* EmailCell.swift in Sources */,
+				ED3D3512201970CF007A1AFF /* ProfileModel.swift in Sources */,
+				ED3D352A20197F1A007A1AFF /* AttributeCell.swift in Sources */,
+				ED3D352220197EF2007A1AFF /* AboutCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +335,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2NY24NUW84;
+				DEVELOPMENT_TEAM = 77KWY7A5GN;
 				INFOPLIST_FILE = MultipleCellDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paradise.MultipleCellDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -290,8 +351,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2NY24NUW84;
+				DEVELOPMENT_TEAM = 77KWY7A5GN;
 				INFOPLIST_FILE = MultipleCellDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.paradise.MultipleCellDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
