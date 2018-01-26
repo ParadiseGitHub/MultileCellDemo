@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tn2-OE-Alc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -38,6 +38,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-4" y="-605"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3ts-LU-iY4">
+            <objects>
+                <navigationController id="tn2-OE-Alc" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Czq-Km-B9U">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QWF-Y6-1Iy" kind="relationship" relationship="rootViewController" id="yIv-Ru-utu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdR-DU-Ad4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="107"/>
+        </scene>
+        <!--One View Controller-->
+        <scene sceneID="z49-NU-OdM">
+            <objects>
+                <viewController storyboardIdentifier="OneViewController" id="QWF-Y6-1Iy" customClass="OneViewController" customModule="MultipleCellDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DcS-Wa-NMU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="thI-sq-ek0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-hp-lhg">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="next:" destination="QWF-Y6-1Iy" eventType="touchUpInside" id="C5T-PB-qAP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="boB-9M-xEJ" firstAttribute="bottom" secondItem="thI-sq-ek0" secondAttribute="bottom" constant="50" id="5ZD-U8-05y"/>
+                            <constraint firstItem="boB-9M-xEJ" firstAttribute="bottom" secondItem="Oca-hp-lhg" secondAttribute="bottom" id="9a5-e8-W1f"/>
+                            <constraint firstItem="Oca-hp-lhg" firstAttribute="leading" secondItem="boB-9M-xEJ" secondAttribute="leading" id="Efv-P4-Maw"/>
+                            <constraint firstItem="Oca-hp-lhg" firstAttribute="top" secondItem="thI-sq-ek0" secondAttribute="bottom" id="LDd-n1-emX"/>
+                            <constraint firstItem="thI-sq-ek0" firstAttribute="leading" secondItem="boB-9M-xEJ" secondAttribute="leading" id="Wh3-iq-qna"/>
+                            <constraint firstItem="boB-9M-xEJ" firstAttribute="trailing" secondItem="Oca-hp-lhg" secondAttribute="trailing" id="cIL-EP-dzw"/>
+                            <constraint firstItem="thI-sq-ek0" firstAttribute="top" secondItem="boB-9M-xEJ" secondAttribute="top" constant="-64" id="cvm-qm-qx9"/>
+                            <constraint firstItem="thI-sq-ek0" firstAttribute="trailing" secondItem="boB-9M-xEJ" secondAttribute="trailing" id="zcw-dp-h8O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="boB-9M-xEJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vlO-Ug-doB"/>
+                    <connections>
+                        <outlet property="nextButton" destination="Oca-hp-lhg" id="Tth-7m-nG0"/>
+                        <outlet property="tableView" destination="thI-sq-ek0" id="Uug-eA-1vz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBY-bt-vSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733.60000000000002" y="106.59670164917542"/>
         </scene>
     </scenes>
 </document>
