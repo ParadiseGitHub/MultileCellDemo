@@ -25,6 +25,8 @@
 		ED3D352A20197F1A007A1AFF /* AttributeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D352820197F1A007A1AFF /* AttributeCell.swift */; };
 		ED3D352B20197F1A007A1AFF /* AttributeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3D352920197F1A007A1AFF /* AttributeCell.xib */; };
 		ED3D352D201985A8007A1AFF /* ServerData.json in Resources */ = {isa = PBXBuildFile; fileRef = ED3D352C201985A8007A1AFF /* ServerData.json */; };
+		ED3D356A201ACC38007A1AFF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D3569201ACC38007A1AFF /* HeaderView.swift */; };
+		ED3D356C201ACC4A007A1AFF /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED3D356B201ACC4A007A1AFF /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		ED3D352820197F1A007A1AFF /* AttributeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeCell.swift; sourceTree = "<group>"; };
 		ED3D352920197F1A007A1AFF /* AttributeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributeCell.xib; sourceTree = "<group>"; };
 		ED3D352C201985A8007A1AFF /* ServerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ServerData.json; sourceTree = "<group>"; };
+		ED3D3569201ACC38007A1AFF /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		ED3D356B201ACC4A007A1AFF /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				ED3D352520197F07007A1AFF /* FriendCell.xib */,
 				ED3D352820197F1A007A1AFF /* AttributeCell.swift */,
 				ED3D352920197F1A007A1AFF /* AttributeCell.xib */,
+				ED3D3569201ACC38007A1AFF /* HeaderView.swift */,
+				ED3D356B201ACC4A007A1AFF /* HeaderView.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D6E3C62018D196003A61F0 /* LaunchScreen.storyboard in Resources */,
+				ED3D356C201ACC4A007A1AFF /* HeaderView.xib in Resources */,
 				ED3D352D201985A8007A1AFF /* ServerData.json in Resources */,
 				ED3D351F20197EE3007A1AFF /* EmailCell.xib in Resources */,
 				ED3D351920197EC1007A1AFF /* NamePictureCell.xib in Resources */,
@@ -194,6 +201,7 @@
 				E8D6E3BC2018D195003A61F0 /* AppDelegate.swift in Sources */,
 				ED3D352620197F07007A1AFF /* FriendCell.swift in Sources */,
 				ED3D351820197EC1007A1AFF /* NamePictureCell.swift in Sources */,
+				ED3D356A201ACC38007A1AFF /* HeaderView.swift in Sources */,
 				ED3D351E20197EE3007A1AFF /* EmailCell.swift in Sources */,
 				ED3D3512201970CF007A1AFF /* ProfileModel.swift in Sources */,
 				ED3D352A20197F1A007A1AFF /* AttributeCell.swift in Sources */,

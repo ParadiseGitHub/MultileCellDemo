@@ -22,10 +22,24 @@ protocol ProfileViewModelItem {
     var rowCount: Int { get }
     var rowHeight: CGFloat { get }
     var sectionTitle: String { get }
+    var isCollapsible: Bool { get }
+    var isCollapsed: Bool { get set }
+}
+
+extension ProfileViewModelItem {
+    var rowCount: Int {
+        return 1
+    }
+    
+    var isCollapsible: Bool {
+        return true
+    }
 }
 
 class ProfileViewModel: NSObject {
     var items = [ProfileViewModelItem]()
+    
+    var reloadSections: ((_ section: Int) -> Void)?
     
     override init() {
         super.init()
@@ -62,13 +76,50 @@ class ProfileViewModel: NSObject {
     }
 }
 
-extension ProfileViewModel: UITableViewDataSource, UITableViewDelegate {
+extension ProfileViewModel: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.identifier) as? HeaderView {
+            let item = items[section]
+            
+            headerView.item = item
+            headerView.section = section
+            headerView.delegate = self
+            return headerView
+        }
+        return UIView()
+    }
+}
+
+extension ProfileViewModel: HeaderViewDelegate {
+    func toggleSection(header: HeaderView, section: Int) {
+        var item = items[section]
+        if item.isCollapsible {
+            let collapsed = !item.isCollapsed
+            item.isCollapsed = collapsed
+            header.setCollapsed(collapsed: collapsed)
+            
+            reloadSections?(section)
+        }
+    }
+}
+
+extension ProfileViewModel: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return items.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items[section].rowCount
+        let item  = items[section]
+        guard item.isCollapsible else {
+            return item.rowCount
+        }
+        
+        if item.isCollapsed {
+            return 0
+        } else {
+            return item.rowCount
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -110,10 +161,6 @@ extension ProfileViewModel: UITableViewDataSource, UITableViewDelegate {
         return UITableViewCell()
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return items[section].sectionTitle
-    }
-    
 }
 
 class ProfileViewModelNameItem: ProfileViewModelItem {
@@ -123,14 +170,12 @@ class ProfileViewModelNameItem: ProfileViewModelItem {
     var sectionTitle: String {
         return "Main Info"
     }
-    
-    var rowCount: Int {
-        return 1
-    }
-    
+
     var rowHeight: CGFloat {
         return 120;
     }
+    
+    var isCollapsed = true
     
     var pictureUrl: String
     var userName: String
@@ -151,13 +196,11 @@ class ProfileViewModelAboutItem: ProfileViewModelItem {
         return "About"
     }
     
-    var rowCount: Int {
-        return 1
-    }
-    
     var rowHeight: CGFloat {
         return 50
     }
+    
+    var isCollapsed = true
     
     var about: String
     
@@ -174,13 +217,11 @@ class ProfileViewModelEmailItem: ProfileViewModelItem {
         return "Email"
     }
     
-    var rowCount: Int {
-        return 1
-    }
-    
     var rowHeight: CGFloat {
         return 50
     }
+    
+    var isCollapsed = true
     
     var email: String
     init(email: String) {
@@ -204,6 +245,8 @@ class ProfileViewModelAttributeItem: ProfileViewModelItem {
         return 50
     }
     
+    var isCollapsed = true
+    
     var attributes: [Attribute]
     init(attributes: [Attribute]) {
         self.attributes = attributes
@@ -223,6 +266,8 @@ class ProfileViewModeFriendsItem: ProfileViewModelItem {
     var rowHeight: CGFloat {
         return 100
     }
+    
+    var isCollapsed = true
     
     var friends: [Friend]
     init(friends: [Friend]) {
