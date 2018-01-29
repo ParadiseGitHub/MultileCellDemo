@@ -10,18 +10,31 @@ import UIKit
 
 class OneViewController: UIViewController {
     
+    var viewModel = ViewModel()
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
-    
-    @IBAction func next(_ sender: Any) {
-        
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.register(CustomCell.nib, forCellReuseIdentifier: CustomCell.identifier)
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.allowsMultipleSelection = true
+        tableView.dataSource = viewModel
+        tableView.delegate = viewModel
+        tableView.separatorStyle = .none
         
+        viewModel.didToggleSelection = { [weak self] hasSelection in
+            self?.nextButton.isEnabled = hasSelection
+        }
+        
+    }
+    
+    @IBAction func next(_ sender: Any) {
+        print(viewModel.selectedItems.map { $0.title })
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
